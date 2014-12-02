@@ -1,0 +1,36 @@
+article.post
+  header
+    p.meta
+      time datetime="{{post.created_at | date}}" {{currentPost.created_at | date | uppercase}}
+
+    h1.title
+      | {{currentPost.title}}
+    h2
+      | {{currentPost.text}}
+
+
+br
+br
+p New comment:
+.description
+  textarea name="text" rows="4" ng-model='newComment.text'
+  a.btn.btn-success ng-click='addComment()' New Comment
+
+
+br
+br
+p Comments:
+
+ul.comments.alert.alert-info
+  li.comment ng-repeat='comment in comments'
+    .info
+      .comment-text
+        span
+          | {{comment.text}}
+      .author
+        span
+          | {{comment.created_at | date}} (
+        span
+          | {{comment.user.short_email}})
+        a#deleteComment.btn.btn-danger ng-show='comment.user.id == currentUser.id' ng-click='deleteComment(comment)' x
+    .vertical-devider

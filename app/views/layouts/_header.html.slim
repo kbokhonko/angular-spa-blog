@@ -1,0 +1,13 @@
+.navbar.navbar-default
+  .container
+    .nav-collapse
+      ul.nav.navbar-nav
+        li
+          a href='' ng-click='toHome()' Home
+      ul.nav.navbar-nav.navbar-right
+        li
+          a href='' ng-click='toLogIn()' ng-hide='currentUser'  Login
+        li
+          a href='' ng-click='toRegister()' ng-hide='currentUser' Register
+        li
+          a href='' ng-click='logOut()' ng-show='currentUser'  Log Out

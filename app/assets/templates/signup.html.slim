@@ -1,0 +1,11 @@
+form.form-signin ng-submit="submit()"
+  h2.form-signin-heading BLOG (Single-page application)
+  h3.form-signin-heading Sign up
+  .alert.alert-warning ng-show="authError"
+    ul
+      li ng-repeat=("error in authError")
+        | {{error}}
+  input.form-control autofocus="" ng-model="email" placeholder=("Email address") type="text" /
+  input.form-control ng-model="password" placeholder="Password" type="password" /
+  input.form-control ng-model="password_confirmation" placeholder=("Password confirmation") type="password" /
+  button.btn.btn-lg.btn-primary.btn-block type="submit"  Signup

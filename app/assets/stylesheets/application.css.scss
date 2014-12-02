@@ -1,0 +1,97 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+
+.blogs {
+  .header {
+    width: 100%;
+    display: inline-block;
+    .title {
+      float: left;
+    }
+    .button {
+      float: right;
+    }
+  }
+}
+
+#buttonEdit, #buttonShow {
+  margin-right: 10px;
+}
+
+.description {
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+  }
+  a {
+    float: right;
+  }
+}
+
+.form-signin {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  input {
+    margin-bottom: 10px;
+  }
+}
+
+.not-logged {
+  text-align: center;
+  padding-top: 250px;
+}
+
+.title {
+  label {
+    margin-right: 5px;
+  }
+  input {
+    border-radius: 3px;
+  }
+}
+
+.comments {
+  width: 100%;
+  list-style: none;
+  .comment {
+    height: 50px;
+    .info {
+      width: 100%;
+      display: inline-block;
+      .comment-text {
+        width: 75%;
+        float: left;
+      }
+      .author {
+        width: 25%;
+        float: right;
+        #deleteComment {
+          margin-left: 15px;
+          padding: 0px 4px;
+        }
+      }
+    }
+    .vertical-devider {
+      height: 1px;
+      background: grey;
+    }
+  }
+}

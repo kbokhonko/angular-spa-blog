@@ -1,0 +1,25 @@
+h2.not-logged ng-hide='currentUser' You need to sing in to read or write posts
+.blogs ng-show='currentUser'
+  .header
+    .title
+      h2 Hi,  {{ currentUser.short_email }}
+    .button
+      a#buttonAdd.btn.btn-success ng-click='newPost()' New Post
+  .row
+    .col-md-12
+      table.table.table-bordered
+        thead
+          th
+            | Title
+          th
+            | Actions
+        tbody
+          tr ng-repeat='post in posts'
+            td
+              | {{ post.title }}
+            td
+              div
+                a#buttonShow.btn.btn-default ng-click='showPost(post.id)' Show
+                span ng-show='currentUser.id == post.user.id'
+                  a#buttonEdit.btn.btn-default ng-click='editPost(post)' Edit
+                  a#buttonDelete.btn.btn-danger ng-click='deletePost(post)' Delete

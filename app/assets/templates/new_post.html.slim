@@ -1,0 +1,19 @@
+.modal-header
+  span.modal-title New blog
+.modal-body
+  ul.errors
+    li ng-repeat='(key, values) in errors'
+      span ng-repeat='value in values'
+        | {{value}}
+  .event-content.add-padding
+    .event-info
+      .event-details
+        .title
+          label Title
+          input type='text' ng-model='newPost.title'
+        .description
+          label Description
+          textarea name="text" rows="7" ng-model='newPost.text'
+.modal-footer
+  button.btn.cancel ng-click="close()" Cancel
+  button.btn.ok ng-click="save()" Save
