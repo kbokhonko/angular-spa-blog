@@ -23,14 +23,6 @@ angular.module('Blog').config ['$routeProvider', '$locationProvider', ($routePro
     templateUrl: '<%= asset_path("show_post.html") %>'
     controller: 'ShowPostCtrl'
 
-  # .when '/tasks/new',
-  #   templateUrl: '<%= asset_path("taskForm.html") %>'
-  #   controller: 'CreateTaskController'
-
-  # .when '/tasks/:id/edit',
-  #   templateUrl: '<%= asset_path("taskForm.html") %>'
-  #   controller: 'EditTaskController'
-
   .otherwise redirectTo: '/'
 
   # enabling html5Mode
